@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 01:57:09 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MDE6NDM6MTggUE07MjUxOA=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MDE6NTc6MDkgUE07MTsyNjMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="midtermscore" type="Integer" array="False" size=""/>
+            <declare name="finalscore" type="Integer" array="False" size=""/>
+            <declare name="score1" type="Integer" array="False" size=""/>
+            <declare name="score2" type="Integer" array="False" size=""/>
+            <declare name="score3" type="Integer" array="False" size=""/>
+            <input variable="lname"/>
+            <input variable="midtermscore"/>
+            <input variable="finalscore"/>
+            <assign variable="score1" expression="((40*midtermscore)/100)"/>
+            <assign variable="score2" expression="((60*finalscore)/100)"/>
+            <assign variable="score3" expression="score1+score2"/>
+            <output expression="&quot;Mr/Ms &quot; &amp;lname &amp;&quot; your total score of exam is : &quot; &amp;score3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

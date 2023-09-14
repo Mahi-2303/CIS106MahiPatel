@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 12:08:47 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MTI6MDM6MDYgUE07MjUxMw=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MTI6MDg6NDcgUE07MTsyNjMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="stkticker" type="String" array="False" size=""/>
+            <declare name="share" type="Integer" array="False" size=""/>
+            <declare name="cost" type="Integer" array="False" size=""/>
+            <declare name="amtinvested" type="Integer" array="False" size=""/>
+            <input variable="stkticker"/>
+            <input variable="share"/>
+            <input variable="cost"/>
+            <assign variable="amtinvested" expression="share*cost"/>
+            <output expression="&quot;Amount invested by &quot; &amp; stkticker &amp; &quot; is &quot; &amp; amtinvested" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

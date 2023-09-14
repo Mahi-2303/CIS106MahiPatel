@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 12:38:04 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MTI6MTY6MTIgUE07MjUxNA=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTA7MTI6Mzg6MDQgUE07MTsyNjI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="f1earning" type="Integer" array="False" size=""/>
+            <declare name="f2earning" type="Integer" array="False" size=""/>
+            <declare name="f3earning" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <input variable="f1earning"/>
+            <input variable="f2earning"/>
+            <input variable="f3earning"/>
+            <assign variable="total" expression="(f1earning+f2earning+f3earning)/3"/>
+            <output expression="&quot;Each of us will get : &quot; &amp; total &amp; &quot; amount &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

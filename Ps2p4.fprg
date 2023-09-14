@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-09 11:07:38 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMDk7MTA6NDM6MjAgUE07MjUxOQ=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMDk7MTE6MDc6MzggUE07MTsyNjM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Automake" type="String" array="False" size=""/>
+            <declare name="Automodel" type="String" array="False" size=""/>
+            <declare name="Msrp" type="Integer" array="False" size=""/>
+            <declare name="disctPer" type="Integer" array="False" size=""/>
+            <declare name="amt" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <input variable="Automake"/>
+            <input variable="Automodel"/>
+            <input variable="Msrp"/>
+            <input variable="disctPer"/>
+            <assign variable="amt" expression="(Msrp*disctPer)/100"/>
+            <assign variable="price" expression="Msrp-amt"/>
+            <output expression="&quot;Make of auto is:&quot; &amp;Automake" newline="True"/>
+            <output expression="&quot;Model of auto is :&quot;&amp;Automodel" newline="True"/>
+            <output expression="&quot;Msrp amount of auto is :&quot;&amp;Msrp" newline="True"/>
+            <output expression="&quot;Discount percent of Auto is :&quot;&amp;disctper" newline="True"/>
+            <output expression="&quot;Amount off on auto is :&quot;&amp;amt" newline="True"/>
+            <output expression="&quot;Discounted Price of Auto is :&quot;&amp;price" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
