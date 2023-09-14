@@ -1,0 +1,12 @@
+a=int(input("Enter make of auto :"))
+b=input("Enter model of auto :")
+c=int(input("Enter msrp amount of auto :"))
+d=float(input("Enter discount percent :"))
+amount_off=float((c*d)/100)
+disct_price=c-amount_off
+print("Make of auto is :",a)
+print("Model of auto is :",b)
+print("Msrp amount of auto is :",c)
+print("Discount percent on auto is :",d)
+print("Amount off on auto is :",amount_off)
+print("Discounted price of auto is :",disct_price)

@@ -1,0 +1,6 @@
+a=input("Enter your last name : ")
+b=int(input("Enter your midterm score : "))
+c=int(input("Enter you final exam score : "))
+d=((40*b)/100)
+e=((60*c)/100)
+print("Mr/Ms",a,"your total score of exam is : ",d+e)
