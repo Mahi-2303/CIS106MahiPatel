@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 12:25:00 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6MTc6MTMgUE07MjUyMw=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6MjU6MDAgUE07MTsyNjI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="purchaseprice" type="Integer" array="False" size=""/>
+            <declare name="stkprice" type="Integer" array="False" size=""/>
+            <declare name="qtystk" type="Integer" array="False" size=""/>
+            <declare name="stkvalue" type="Integer" array="False" size=""/>
+            <input variable="purchaseprice"/>
+            <input variable="stkprice"/>
+            <input variable="qtystk"/>
+            <assign variable="stkvalue" expression="stkprice-purchaseprice"/>
+            <if expression="stkvalue&gt;0">
+                <then>
+                    <output expression="&quot;You are in profit&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;You are losing money&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

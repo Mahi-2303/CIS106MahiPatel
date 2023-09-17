@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 12:44:01 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6Mzc6NDkgUE07MjUzNA=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6NDQ6MDEgUE07MTsyNjI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="billamt" type="Integer" array="False" size=""/>
+            <declare name="tipamt" type="Integer" array="False" size=""/>
+            <declare name="tltamt" type="Integer" array="False" size=""/>
+            <input variable="billamt"/>
+            <input variable="tipamt"/>
+            <assign variable="tltamt" expression="(tipamt*billamt)/100"/>
+            <output expression="&quot;Total amount in bill is &quot; &amp; billamt" newline="True"/>
+            <output expression="&quot;Tip given is &quot; &amp; tipamt" newline="True"/>
+            <output expression="&quot;Total with tip is &quot; &amp; tltamt+billamt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

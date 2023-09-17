@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 12:37:46 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6MzQ6MzIgUE07MjUyMw=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6Mzc6NDYgUE07MTsyNjM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fstname" type="String" array="False" size=""/>
+            <declare name="stepswalked" type="Integer" array="False" size=""/>
+            <declare name="calburn" type="Integer" array="False" size=""/>
+            <input variable="fstname"/>
+            <input variable="stepswalked"/>
+            <assign variable="calburn" expression="stepswalked*0.25"/>
+            <output expression="fstname &amp; &quot;number of calories burnt is :&quot; &amp; calburn" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

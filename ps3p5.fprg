@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-17 12:34:21 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6MjU6MjQgUE07MjUyNA=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTc7MTI6MzQ6MjEgUE07MTsyNjI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fixcst" type="Integer" array="False" size=""/>
+            <declare name="unitprice" type="Integer" array="False" size=""/>
+            <declare name="unitcst" type="Integer" array="False" size=""/>
+            <declare name="diff" type="Integer" array="False" size=""/>
+            <declare name="point" type="Integer" array="False" size=""/>
+            <input variable="fixcst"/>
+            <input variable="unitprice"/>
+            <input variable="unitcst"/>
+            <assign variable="diff" expression="unitprice-unitcst"/>
+            <assign variable="point" expression="fixcst/diff"/>
+            <output expression="&quot;Break even point is&quot; &amp;point" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
