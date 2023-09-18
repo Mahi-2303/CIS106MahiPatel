@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-18 09:40:11 AM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTg7MDk6MzQ6MDYgQU07MjUxNg=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMTg7MDk6NDA6MTEgQU07MjsyNjE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="e1score" type="Integer" array="False" size=""/>
+            <declare name="e2score" type="Integer" array="False" size=""/>
+            <declare name="ttle1" type="Integer" array="False" size=""/>
+            <declare name="ttle2" type="Integer" array="False" size=""/>
+            <declare name="f1score" type="Integer" array="False" size=""/>
+            <input variable="e1score"/>
+            <input variable="e2score"/>
+            <assign variable="ttle1" expression="e1score*0.60"/>
+            <assign variable="ttle2" expression="e2score*0.40"/>
+            <assign variable="f1score" expression="ttle1+ttle2"/>
+            <output expression="&quot;Total score of exam1 is :&quot; &amp; ttle1" newline="True"/>
+            <output expression="&quot;Total score of exam2 is :&quot; &amp; ttle2" newline="True"/>
+            <output expression="&quot;Total score of final exam is :&quot; &amp; f1score" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
