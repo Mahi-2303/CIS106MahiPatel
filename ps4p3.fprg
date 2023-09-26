@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-25 10:19:41 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjU7MTA6MTI6MDUgUE07MjUxNg=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjU7MTA6MTk6NDEgUE07MTsyNjMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="books" type="Integer" array="False" size=""/>
+            <declare name="cst" type="Integer" array="False" size=""/>
+            <declare name="ttl" type="Integer" array="False" size=""/>
+            <declare name="ship" type="Integer" array="False" size=""/>
+            <declare name="shipfee" type="Integer" array="False" size=""/>
+            <input variable="books"/>
+            <input variable="cst"/>
+            <assign variable="ttl" expression="books*cst"/>
+            <output expression="&quot;Total of order is :&quot; &amp; ttl" newline="True"/>
+            <if expression="ttl&lt;=50">
+                <then>
+                    <assign variable="shipfee" expression="25"/>
+                    <assign variable="ship" expression="ttl+shipfee"/>
+                    <output expression="&quot;Your shipping fee is :&quot; &amp; ship" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="shipfee" expression="0"/>
+                    <output expression="&quot;Your shipping fee is : &quot; &amp; shipfee" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
