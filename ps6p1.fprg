@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 12:34:21 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjg7MTI6MjE6NTkgUE07MjUzMA=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjg7MTI6MzQ6MjEgUE07MTsyNjMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="wid" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="ext" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <declare name="ttl" type="Integer" array="False" size=""/>
+            <input variable="Wid"/>
+            <if expression="wid&gt;10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="wid&gt;5000 and wid&lt;10000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="ext" expression="wid*price"/>
+            <output expression="&quot;Extended price of widgets is : $&quot; &amp; ext" newline="True"/>
+            <assign variable="tax" expression="(ext/7)*100"/>
+            <output expression="&quot;Tax amount is : $&quot; &amp; tax" newline="True"/>
+            <assign variable="ttl" expression="ext+tax"/>
+            <output expression="&quot;Total amount is : $&quot; &amp; ttl" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

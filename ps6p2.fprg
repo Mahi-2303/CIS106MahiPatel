@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 12:46:57 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjg7MTI6MzQ6NDUgUE07MjUyOQ=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMDktMjg7MTI6NDY6NTcgUE07MTsyNjQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="partnum" type="String" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="cst" type="Integer" array="False" size=""/>
+            <declare name="ttl" type="Integer" array="False" size=""/>
+            <input variable="partnum"/>
+            <input variable="qty"/>
+            <if expression="partnum==&quot;10&quot; or partnum==&quot;55&quot;">
+                <then>
+                    <assign variable="cst" expression="1"/>
+                </then>
+                <else>
+                    <if expression="partnum==99">
+                        <then>
+                            <assign variable="cst" expression="2"/>
+                        </then>
+                        <else>
+                            <if expression="partnum==80 or partnum==70">
+                                <then>
+                                    <assign variable="cst" expression="3"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="cst" expression="5"/>
+                </else>
+            </if>
+            <assign variable="ttl" expression="qty*cst"/>
+            <output expression="&quot;Part number is : &quot; &amp; partnum" newline="True"/>
+            <output expression="&quot;Cost per unit is : $&quot; &amp; cst" newline="True"/>
+            <output expression="&quot;Total cost is : $ &quot; &amp; ttl" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
