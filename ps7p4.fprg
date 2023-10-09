@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 09:29:52 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDg7MDg6NDg6MzYgUE07MjUyOQ=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDg7MDk6Mjk6NTIgUE07MTsyNjM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gross" type="Integer" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="ttl" type="Integer" array="False" size=""/>
+            <declare name="cont" type="String" array="False" size=""/>
+            <comment text="&quot;Do you want to continue this program (Yes/No)?&quot;"/>
+            <input variable="cont"/>
+            <assign variable="gross" expression="0"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="ttl" expression="0"/>
+            <while expression="True">
+                <if expression="cont!=&quot;yes&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <declare name="lname" type="String" array="False" size=""/>
+                <declare name="hrs" type="Integer" array="False" size=""/>
+                <declare name="pay" type="Integer" array="False" size=""/>
+                <input variable="lname"/>
+                <input variable="hrs"/>
+                <input variable="pay"/>
+                <if expression="hrs&gt;40">
+                    <then>
+                        <assign variable="gross" expression="(40*pay)+((hrs-40)*1.5*pay)"/>
+                    </then>
+                    <else>
+                        <assign variable="gross" expression="hrs*pay"/>
+                    </else>
+                </if>
+                <output expression="&quot;Employee last name&quot; &amp; lname" newline="True"/>
+                <output expression="&quot;Gross pay&quot; &amp; gross" newline="True"/>
+                <assign variable="ttl" expression="ttl+gross"/>
+                <assign variable="count" expression="count+1"/>
+                <declare name="another" type="String" array="False" size=""/>
+                <input variable="another"/>
+                <comment text="&quot;do you want to enter data for another employee(Yes/No)?&quot;"/>
+                <if expression="another!=&quot;yes&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="&quot;Total number of data is &quot; &amp; count" newline="True"/>
+            <if expression="count&gt;0">
+                <then>
+                    <declare name="ave" type="Integer" array="False" size=""/>
+                    <assign variable="ave" expression="ttl/count"/>
+                    <output expression="&quot;Total gross pay &quot; &amp; ttl" newline="True"/>
+                    <output expression="&quot;Number of employees :&quot; &amp; count" newline="True"/>
+                    <output expression="&quot;Average pay &quot; &amp; ave" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No employee data entered&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

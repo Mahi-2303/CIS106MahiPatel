@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 03:06:38 PM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDg7MDI6MzE6NDcgUE07MjUxNw=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDg7MDM6MDY6MzggUE07MTsyNjI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="cont" type="String" array="False" size=""/>
+            <comment text="Do you want to continue program or not? Yes/No"/>
+            <input variable="cont"/>
+            <while expression="True">
+                <if expression="cont!=&quot;yes&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else>
+                        <declare name="lname" type="String" array="False" size=""/>
+                        <declare name="exam1" type="Integer" array="False" size=""/>
+                        <declare name="exam2" type="Integer" array="False" size=""/>
+                        <declare name="ave" type="Integer" array="False" size=""/>
+                        <input variable="lname"/>
+                        <input variable="exam1"/>
+                        <input variable="exam2"/>
+                        <assign variable="ave" expression="(exam1+exam2)/2"/>
+                        <output expression="&quot;Student's last name is &quot; &amp; lname" newline="True"/>
+                        <output expression="&quot;Average exam score is &quot; &amp; ave" newline="True"/>
+                        <assign variable="count" expression="count+1"/>
+                        <declare name="another" type="String" array="False" size=""/>
+                        <comment text="&quot;Do you want to enter data of another student(Yes/No)&quot;"/>
+                        <input variable="another"/>
+                        <if expression="another!=&quot;yes&quot;">
+                            <then>
+                                <breakpoint expression="" always="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Total nmuber of student is enetered :&quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
