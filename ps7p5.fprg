@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-09 11:20:45 AM"/>
+        <attribute name="created" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDg7MDk6MzE6MDIgUE07MjUxNQ=="/>
+        <attribute name="edited" value="REM7TEFQVE9QLU1QVkZFMlVPOzIwMjMtMTAtMDk7MTE6MjA6NDUgQU07MjsyNjA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ttldis" type="Integer" array="False" size=""/>
+            <declare name="cont" type="String" array="False" size=""/>
+            <declare name="dis" type="Real" array="False" size=""/>
+            <input variable="cont"/>
+            <assign variable="ttldis" expression="0"/>
+            <while expression="True">
+                <if expression="cont!=&quot;yes&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <declare name="qty" type="Integer" array="False" size=""/>
+                <declare name="price" type="Integer" array="False" size=""/>
+                <declare name="ext" type="Integer" array="False" size=""/>
+                <input variable="qty"/>
+                <input variable="price"/>
+                <assign variable="ext" expression="qty*price"/>
+                <if expression="qty&gt;10000">
+                    <then>
+                        <assign variable="dis" expression="0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="dis" expression="0.10"/>
+                    </else>
+                </if>
+                <declare name="amt" type="Integer" array="False" size=""/>
+                <declare name="ttl" type="Integer" array="False" size=""/>
+                <assign variable="amt" expression="ext*dis"/>
+                <assign variable="ttl" expression="ext-amt"/>
+                <assign variable="ttldis" expression="ttldis+1"/>
+                <output expression="&quot;Extended price of item is &quot; &amp; ext" newline="True"/>
+                <output expression="&quot;Discounted percent of item is &quot; &amp; dis" newline="True"/>
+                <output expression="&quot;Discounted amount of an item is &quot; &amp; amt" newline="True"/>
+                <output expression="&quot;Total price of an item is &quot; &amp; ttl" newline="True"/>
+                <declare name="another" type="String" array="False" size=""/>
+                <input variable="another"/>
+                <if expression="another!=&quot;yes&quot;">
+                    <then>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Total discount is &quot; &amp; ttldis" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
