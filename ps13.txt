@@ -1,0 +1,53 @@
+x = int(input("How many numbers do you want in list ? "))
+l = []
+for i in range(x):
+  l.append(int(input("Enter number to be added in list ")))
+print("ORiginal list is ", l)
+print("-----------------------------")
+new = 99
+l.insert(0, new)
+print("Updated list is ", l)
+print("-----------------------------")
+l[0] = 100
+print("Updated list is ", l)
+print("-----------------------------")
+l1 = [500, 600, 700, 800, 900]
+print("Second list is :", l1)
+l.extend(l1)
+print("Updated list is ", l)
+print("-----------------------------")
+l.pop(len(l) - 2)
+print(l)
+print("-----------------------------")
+l.pop(2)
+print(l)
+print("-----------------------------")
+grades = ["A", "B", "C", "A", "A", "C"]
+print("The number of A's in list is : ", grades.count("A"))
+print("-----------------------------")
+print("Position of B in the list is :", grades.index("B"))
+print("-----------------------------")
+look_for = "F"
+for i in look_for:
+  if i in grades:
+    print("Found ", i, " in the list")
+  else:
+    print("Did not find ", i, " in the list")
+print("----------------------------------")
+l1.clear()
+print("The second list is :", l1)
+print("----------------------------------")
+del l1
+print(l1)
+print("----------------------------------")
+players=["Rizzo","Davis","Baez","Happ","Bryan"]
+players.sort()
+print("Sorted list is:",players)
+print("----------------------------------")
+players2=players.copy()
+print(players2)
+print("----------------------------------")
+players2.reverse()
+print("Original list is :",players)
+print("----------------------------------")
+print("Reversed list is:",players2)
