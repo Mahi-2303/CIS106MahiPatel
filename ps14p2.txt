@@ -1,0 +1,22 @@
+class student:
+  def __init__(self,first,last,discode,credits):
+    self.first = first
+    self.last = last
+    self.discode = discode
+    self.credits = credits
+    
+  def tution(self):
+    if self.discode=="I":
+      tutowed=self.credits*250.00
+    else:
+      tutowed=self.credits*500.00
+    return tutowed
+
+std1=student("Shivani","Patel","I",14)
+tut1=std1.tution()
+
+print(std1.first)
+print(std1.last)
+print(std1.discode)
+print(std1.credits)
+print(tut1)

@@ -1,0 +1,19 @@
+class Employee:
+  def __init__(self, name,last, salary):
+    self.name = name
+    self.last=last
+    self.salary = salary
+    self.email=name+'.'+last+'@company.com'
+  
+  def bonus(self,rate):
+    b=float(rate)*float(self.salary)
+    return b
+
+emp1=Employee('Shivani','Patel',50000)
+print(emp1.email)
+print(emp1.name)
+print(emp1.last)
+print(emp1.salary)
+print(emp1.bonus(.10))
+print(emp1.bonus(.20))
+
