@@ -1,0 +1,40 @@
+total_ext = 0.0
+count = 0
+
+try:
+    with open("employee1.txt", "r") as f:
+        while True:
+            item = f.readline().rstrip('\n')
+            if not item:
+                break
+
+            try:
+                quantity = int(f.readline().strip())
+                price = float(f.readline().strip())
+            except ValueError as e:
+                print(f"Error reading data: {e}")
+                break
+
+            ext = quantity * price
+            total_ext += ext
+            count += 1
+
+            print("Item is:", item)
+            print("Quantity is:", quantity)
+            print("Price is:", price)
+            print("Extended price:", ext)
+
+except FileNotFoundError:
+    print("Error: File not found.")
+
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+
+print("Number of orders:", count)
+
+if count > 0:
+    avg = total_ext / count
+    print("Average order:", avg)
+else:
+    print("No orders found")
+
