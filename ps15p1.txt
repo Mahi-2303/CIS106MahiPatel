@@ -1,0 +1,17 @@
+class employee:
+  def __init__(self, name, salary):
+    self.name = name
+    self.salary = salary
+  def display(self):
+    print("Name:", self.name, "Salary:", self.salary)
+
+class manager(employee):
+  def __init__(self, name, salary):
+    super().__init__(name, salary)
+  def bonus(self):
+    return 0.40 * self.salary
+
+Manager = manager("John", 50000)
+longbonus = Manager.bonus()
+print("Long term bonus is:", longbonus)
+

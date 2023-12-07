@@ -1,0 +1,39 @@
+class car:
+    def __init__(self, make, model, stckprice, disprice):
+        self.make = make
+        self.model = model
+        self.stickerprice = stckprice
+        self.discountprice = disprice
+    def display_det(self):
+      print("Make",self.make,"Model",self.model,"Stickerprice",self.stickerprice,"Discountprice",self.discountprice)
+
+class sport(car):
+    def __init__(self, make, model, stckprice, disprice):
+        super().__init__(make, model, stckprice, disprice)
+        self.optionprice=0
+      
+    def wheels(self,option="N"):
+        if option=="Y":
+          self.optionprice+=1000
+          
+    def engine(self,option="N"):
+      if option=="Y":
+        self.optionprice+=3000
+
+    def interior(self,option="N"):
+      if option=="Y":
+        self.optionprice+=2000
+
+    def price_option(self):
+      return self.discountprice+self.optionprice
+
+sport_car = sport("Toyota", "Sonata", 35000, 33000)
+
+sport_car.display_det()
+
+sport_car.wheels("Y")
+sport_car.engine("N")
+sport_car.interior("N")
+
+finalprice=sport_car.price_option()
+print("Updated price is :",finalprice)
